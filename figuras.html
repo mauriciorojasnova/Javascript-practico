@@ -14,7 +14,7 @@
         <p>Primer taller del curso práctico de JavaScript</p>
     </header>
     <section>
-        <h2>Calcula el área y perímetro de un cuadrdo.</h2>
+        <h2>Calcula el área y perímetro de un cuadrado.</h2>
         <form>
             <label for="InputCuadrado">
                 Escribe cuánto mide cada lado de tu cuadrado
@@ -52,6 +52,44 @@
             </button>
             <button type="button" onclick="calcularAreaTriangulo()">
                 Calcular el área
+            </button>
+        </form>
+    </section>
+    <section>
+        <h2>Calcula el área y perímetro de un círculo.</h2>
+        <form>
+            <label for="InputCirculo">
+                Escribe cuánto mide el radio del círculo.
+            </label>
+            <input id="InputCirculo" type="number">
+            <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCirculo()">
+                Calcular el área
+            </button>
+        </form>
+    </section>
+    <section>
+        <h2>Calcula el área y perímetro de un triángulo.</h2>
+        <form>
+            <label for="InputLadoUnoIso">
+                Escribe cuánto mide el lado número 1 de tu triángulo.
+            </label>
+            <input id="InputLadoUnoIso" type="number">
+            <label for="InputLadoDosIso">
+                Escribe cuánto mide el lado número 2 de tu triángulo.
+            </label>
+            <input id="InputLadoDosIso" type="number">
+            <label for="InputBaseIso">
+                Escribe cuánto mide la base de tu triángulo.
+            </label>
+            <input id="InputBaseIso" type="number">
+            <button type="button" onclick="determinarTipoTriangulo()">
+                Determinar si el triángulo es isóceles
+            </button>
+            <button type="button" onclick="determinarAlturaTriangulo()">
+                Calcular la altura del triángulo
             </button>
         </form>
     </section>
