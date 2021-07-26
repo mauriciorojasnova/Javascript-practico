@@ -28,7 +28,33 @@
             </button>
         </form>
     </section>
-
+    <section>
+        <h2>Calcula el área y perímetro de un triángulo.</h2>
+        <form>
+            <label for="InputLadoUno">
+                Escribe cuánto mide el lado número 1 de tu triángulo.
+            </label>
+            <input id="InputLadoUno" type="number">
+            <label for="InputLadoDos">
+                Escribe cuánto mide el lado número 2 de tu triángulo.
+            </label>
+            <input id="InputLadoDos" type="number">
+            <label for="InputBase">
+                Escribe cuánto mide la base de tu triángulo.
+            </label>
+            <input id="InputBase" type="number">
+            <label for="InputAltura">
+                Escribe cuánto mide la altura de tu triángulo.
+            </label>
+            <input id="InputAltura" type="number">
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular el área
+            </button>
+        </form>
+    </section>
     <script src="./figuras.js"></script>
   </body>
 </html>
