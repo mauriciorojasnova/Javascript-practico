@@ -1,3 +1,20 @@
+//Cupones con descuento
+
+//Funcion del cupon
+
+function descuentoDelCupon(cuponValue) {
+    if (cuponValue === "bronce") {
+        return 20;
+    } else if (cuponValue === "plata") {
+        return 30;
+    } else if (cuponValue === "oro") {
+        return 40;
+    } else {
+        alert("Cupón no válido, el descuento es de 0")
+        return 0;
+    }
+}
+
 //Funcion precio con descuento.
 
 function calcularPrecioConDescuento(precio, descuento) {
@@ -11,8 +28,10 @@ function calcularPrecioConDescuento(precio, descuento) {
 function priceDiscount() {
     const inputPrice = document.getElementById("InputPrice");
     const priceValue = inputPrice.value;
-    const inputDiscount = document.getElementById("InputDiscount");
-    const discountValue = inputDiscount.value;
+    const inputCupon = document.getElementById("InputCupon");
+    const cuponValue = inputCupon.value;
+
+    const discountValue = descuentoDelCupon(cuponValue)
 
     const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
 
