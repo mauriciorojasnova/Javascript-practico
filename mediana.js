@@ -1,7 +1,6 @@
 //Función de promedio
 
 function calcularMediaAritmetica(lista) {
-
   const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
     return valorAcumulado + nuevoElemento;
   });
@@ -13,19 +12,23 @@ function calcularMediaAritmetica(lista) {
 
 //Función de mediana
 
-const lista = [1, 2, 3, 4, 5, 6];
+function calcularMediana(lista) {
 
-const mitadLista = parseInt(lista.length / 2);
-let mediana;
+  lista.sort();
+  const mitadLista = parseInt(lista.length / 2);
+  let mediana;
 
-if (lista.length % 2 === 0) {
-  const elemento1 = lista[mitadLista - 1];
-  const elemento2 = lista[mitadLista];
+  if (lista.length % 2 === 0) {
+    const elemento1 = lista[mitadLista - 1];
+    const elemento2 = lista[mitadLista];
 
-  const promedioElementos = calcularMediaAritmetica([elemento1, elemento2]);
-  mediana = promedioElementos;
-} else {
-  mediana = lista[mitadLista];
+    const promedioElementos = calcularMediaAritmetica([elemento1, elemento2]);
+    return mediana = promedioElementos;
+  } else {
+    return mediana = lista[mitadLista];
+  }
 }
 
-console.log(mediana);
+console.log(calcularMediana([2,4,5,1,6,3]))
+
+
