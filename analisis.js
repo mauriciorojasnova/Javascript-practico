@@ -47,14 +47,23 @@ const medianaGeneralCol = medianaSalarios(salariosColSorted);
 const spliceStart = (salariosColSorted.length * 90) / 100;
 const spliceCount = salariosColSorted.length - spliceStart;
 
-const  salariosColTop10 = salariosColSorted.splice(
-    spliceStart,
-    spliceCount
-);
+const salariosColTop10 = salariosColSorted.splice(spliceStart, spliceCount);
 
 const medianaTop10Col = medianaSalarios(salariosColTop10);
 
-console.log(
-    medianaGeneralCol,
-    medianaTop10Col
-);
+//Promedio de los salarios
+
+function calcularPromedioSalarios(salariosCol) {
+  const sumaSalarios = salariosCol.reduce(function (
+    valorAcumulado = 0,
+    nuevoElemento
+  ) {
+    return valorAcumulado + nuevoElemento;
+  });
+
+  const promedioSalarios = sumaSalarios / salariosCol.length;
+  return promedioSalarios;
+}
+
+const promedioTotalSalarios = calcularPromedioSalarios(salariosCol);
+console.log(promedioTotalSalarios);
